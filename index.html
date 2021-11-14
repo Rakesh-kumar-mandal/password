@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password hide</title>
+    <style>
+        div {
+            width: 750px;
+            padding: 25px;
+            margin: 280px auto;
+            box-shadow: 0 0 30px rgb(252, 252, 255);
+            background-color: rgb(220, 81, 81);
+        }
+        input,
+        label,
+        button {
+            border-radius: 20px;
+            background-color: rgb(192, 230, 255);
+            padding: 8px;
+            margin: 18px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body bgcolor="yellow">
+    <div id="pass">
+        <h1>Show/Hide password(double click to hide the password again)</h1>
+        <label>Enter password</label>
+        <input type="password" name="" id="Pass">
+        <button onclick="fn()" ondblclick="f()" id="r">Show password</button>
+    </div>
+    <script>
+        function fn() {
+            var getPass = document.getElementById('Pass');
+            var e = document.querySelector('#r')
+            getPass.innerText = "Hide password"
+            getPass.type = "text";
+            e.innerText = "hide password";
+        }
+        function f() {
+            var Q = document.getElementById('Pass');
+
+            Q.innerText = "show password";
+            Q.type = "password";
+            var e = document.querySelector('#r')
+            e.innerText = "show password";
+
+        }
+    </script>
+
+</body>
+
+</html>
